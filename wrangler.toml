@@ -2,8 +2,10 @@ name = "habit-tracker"
 pages_build_output_dir = "public"
 compatibility_date = "2025-01-01"
 
+[vars]
+DISCORD_CLIENT_ID = "1572439457104269491"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "habit-tracker-db"
-# Substitua pelo ID retornado por: npx wrangler d1 create habit-tracker-db
-database_id = "COLE_O_DATABASE_ID_AQUI"
+database_id = "f892a47f-266f-402f-9b95-cbebae6666bc"
