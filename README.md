@@ -6,7 +6,7 @@ Projeto #10 — Eduardo Grabowski · Turma 3A · RA 2025207270
 
 Painel de hábitos diários com grade mensal, login via Discord, persistência no Cloudflare D1 e métricas calculadas no backend (maior sequência, sequência atual e taxa de cumprimento mensal).
 
-- **Aplicação online:** `https://SEU-PROJETO.pages.dev` (preencher após o deploy)
+- **Aplicação online:** https://habit-tracker-c51.pages.dev
 - **Licença:** MIT (ver `LICENSE`)
 - **Agentes, harness e skills:** ver [`AGENTS.md`](AGENTS.md)
 
@@ -45,7 +45,7 @@ Regras validadas no servidor: sessão obrigatória, dono do hábito, data válid
 2. `npx wrangler login`
 3. `npx wrangler d1 create habit-tracker-db` e copie o `database_id` para `wrangler.toml`.
 4. `npm run db:remote` (cria as tabelas).
-5. Crie um app em <https://discord.com/developers/applications>. Em OAuth2 > Redirects, adicione `https://SEU-PROJETO.pages.dev/auth/callback`.
+5. Crie um app em https://discord.com/developers/applications e, em OAuth2 > Redirects, adicione: https://habit-tracker-c51.pages.dev/auth/callback
 6. `npx wrangler pages project create habit-tracker --production-branch main`
 7. `npm run deploy`
 8. No painel Cloudflare, em Pages > habit-tracker > Settings:
