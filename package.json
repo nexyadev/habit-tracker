@@ -1,0 +1,17 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/stats.test.mjs",
+    "db:local": "wrangler d1 execute habit-tracker-db --local --file=migrations/0001_init.sql",
+    "db:remote": "wrangler d1 execute habit-tracker-db --remote --file=migrations/0001_init.sql",
+    "dev": "wrangler pages dev public --d1=DB",
+    "deploy": "wrangler pages deploy public --project-name=habit-tracker"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

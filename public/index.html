@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rastreador de Hábitos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Rastreador de Hábitos</h1>
+    <div id="userbox" class="userbox" hidden>
+      <img id="avatar" alt="Avatar do usuário" width="32" height="32">
+      <span id="username"></span>
+      <button id="logout" class="btn btn-ghost" type="button">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="login-view" class="card login" hidden>
+      <h2>Acompanhe seus hábitos diários</h2>
+      <p>Entre com o Discord para cadastrar metas e marcar os dias cumpridos.</p>
+      <a class="btn btn-discord" href="/auth/login">Entrar com Discord</a>
+    </section>
+
+    <section id="app-view" hidden>
+      <div class="toolbar">
+        <div class="month-nav">
+          <button id="prev" class="btn" type="button" aria-label="Mês anterior">&lt;</button>
+          <strong id="month-label" aria-live="polite"></strong>
+          <button id="next" class="btn" type="button" aria-label="Próximo mês">&gt;</button>
+        </div>
+        <form id="habit-form" class="habit-form">
+          <label for="habit-name" class="sr-only">Novo hábito</label>
+          <input id="habit-name" type="text" maxlength="60" placeholder="Novo hábito (ex.: Beber 2L de água)" required>
+          <button class="btn btn-primary" type="submit">Adicionar</button>
+        </form>
+      </div>
+
+      <div class="indicators" aria-label="Métricas consolidadas">
+        <div class="card ind"><span class="ind-value" id="ind-longest">0</span><span class="ind-label">Maior sequência (dias)</span></div>
+        <div class="card ind"><span class="ind-value" id="ind-current">0</span><span class="ind-label">Sequência atual (dias)</span></div>
+        <div class="card ind"><span class="ind-value" id="ind-rate">0%</span><span class="ind-label">Cumprimento no mês</span></div>
+      </div>
+
+      <p id="empty" class="muted" hidden>Nenhum hábito ainda. Adicione o primeiro acima.</p>
+      <div class="grid-wrap"><table id="grid" class="grid"></table></div>
+      <p id="msg" class="msg" role="alert" hidden></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Chave Única Oficial: <code>P26-3A-A62B-A2AD-D639-37FA</code>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
